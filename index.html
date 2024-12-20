@@ -491,6 +491,29 @@
             });
         });
 
+        var names = ["SAM A05"]
+
+        var texts = ["PHP ACTIVITY"]
+
+        var links = ["http://localhost/SAM-BE/A05/index.php"]
+
+        var images = ["IMG/A05.svg"];
+
+        for (var i = 0; i < names.length; i++) {
+            var container = document.getElementById("container");
+            container.innerHTML += `
+    <div class="col-12 col-lg-4 d-flex align-items-stretch my-3">
+        <div class="card">
+            <img src="${images[i]}" class="card-img-top" alt="${names[i]}">
+            <div class="card-body">
+                <h1 class="card-title poppins-regular text-center">${names[i]}</h1>
+                <p class="card-text mx-2 poppins-regular text-center">${texts[i]}</p>
+                <a href="${links[i]}" class="btn btn-primary align-items-stretch ">Visit Page</a>
+            </div>
+        </div>
+    </div>`;
+        }
+
     </script>
 
 </body>
